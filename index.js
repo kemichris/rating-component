@@ -67,6 +67,12 @@ submitBtnEl.addEventListener("click", ()=> {
     rating =JSON.parse( localStorage.getItem("rating"));
     pEl.innerHTML= "You selected " + rating + " out of 5";
 
+    setTimeout(() => {
+        localStorage.clear()
+    }, 1000);
 
-
+    if (!rating) {
+        pEl.innerHTML= "You didn't make a rating"
+        
+    }
 })
